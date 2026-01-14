@@ -320,6 +320,21 @@ section.animado.visible {
     .experience-badge { position: static; margin-top: 10px; }
     
 }
+/* Mejora de contraste para textos secundarios */
+.text-muted {
+    color: #555555 !important; /* Un gris más oscuro para que sea legible sobre blanco/gris claro */
+}
+/* Mejora de contraste en el formulario */
+.form-card {
+    background-color: #e9ecef; /* Un gris un poco más neutro y suave */
+}
+.form-label {
+    color: #0B212D; /* Usamos tu azul oscuro para que las etiquetas resalten bien */
+}
+/* Redes sociales en el footer (Contrast check) */
+.text-white-50 {
+    color: rgba(255, 255, 255, 0.75) !important; /* Subimos la opacidad del 50% al 75% */
+}
 
 @media (max-width: 992px) {
     .navbar-collapse {
