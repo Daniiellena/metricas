@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra | Wood & Ensamble</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css_producto_carrito/carrito.css">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-dark bg-dark-custom shadow-sm" aria-label="Navegación de retorno">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="productos.html">
+                <i class="fas fa-chevron-left me-2" aria-hidden="true"></i> SEGUIR COMPRANDO
+            </a>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <div class="row g-4">
+            <section class="col-lg-7">
+                <div class="card border-0 shadow-sm p-4 rounded-4">
+                    <h1 class="h4 fw-bold mb-4"><i class="fas fa-shopping-cart me-2 text-teal"></i>Tu Pedido</h1>
+                    <div id="cart-items-container">
+                        </div>
+                </div>
+            </section>
+
+            <aside class="col-lg-5">
+                <div class="card border-0 shadow-sm p-4 rounded-4 sticky-top" style="top: 90px;">
+                    <h2 class="h4 fw-bold mb-4">Resumen y Pago</h2>
+                    <div class="d-flex justify-content-between fs-5 fw-bold mb-4">
+                        <span>Total a pagar:</span>
+                        <span class="text-teal" id="summary-total">$0.00</span>
+                    </div>
+
+                    <div class="d-grid gap-3">
+                        <button class="btn btn-whatsapp py-3 fw-bold" onclick="payWhatsApp()" aria-label="Contactar por WhatsApp para pagar">
+                            <i class="fab fa-whatsapp me-2"></i> Contacto
+                        </button>
+
+                        <button class="btn btn-pichincha py-3 fw-bold" onclick="toggleTransferDetails()" aria-expanded="false" aria-controls="transfer-details">
+                            <i class="fas fa-university me-2"></i> TRANSFERENCIA BANCO
+                        </button>
+
+                        <div id="transfer-details" class="bg-bank p-3 rounded-3 border-start border-4 border-warning d-none animate-up">
+                            <h3 class="h6 fw-bold mb-2">DATOS DE LA EMPRESA:</h3>
+                            <div class="small">
+                                <p class="mb-1"><strong>Banco:</strong> Pichincha</p>
+                                <p class="mb-1"><strong>Cuenta Corriente:</strong> 2100XXXXXX</p>
+                                <p class="mb-1"><strong>Titular:</strong> Wood & Ensamble Designs</p>
+                            </div>
+                            <hr class="my-2">
+                            <button class="btn btn-sm btn-outline-success w-100 fw-bold" onclick="sendReceipt()">
+                                <i class="fab fa-whatsapp me-1"></i> ENVIAR COMPROBANTE
+                            </button>
+                        </div>
+
+                        <button class="btn btn-dark py-3 fw-bold" onclick="openOrderModal()">
+                            <i class="fas fa-clipboard-check me-2"></i> REALIZAR PEDIDO DIRECTO
+                        </button>
+
+                        <button class="btn btn-link text-danger btn-sm mt-2" onclick="clearCart()">
+                            Vaciar carrito
+                        </button>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <div class="modal fade" id="cardModal" tabindex="-1" aria-labelledby="modalOrderTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg rounded-4">
+                <div class="modal-header bg-dark text-white rounded-top-4">
+                    <h5 class="modal-title fw-bold" id="modalOrderTitle"><i class="fas fa-shipping-fast me-2"></i>Confirmar Entrega</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="cardForm">
+                        <h6 class="fw-bold mb-3 text-teal border-bottom pb-2">Datos de Entrega</h6>
+                        <div class="mb-3">
+                            <label for="custName" class="form-label small fw-bold">Nombre Completo</label>
+                            <input type="text" class="form-control" id="custName" placeholder="Nombres" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 mb-3">
+                                <label for="custPhone" class="form-label small fw-bold">Teléfono</label>
+                                <input type="tel" class="form-control" id="custPhone" placeholder="0999999999" required>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <label for="custCity" class="form-label small fw-bold">Ciudad</label>
+                                <input type="text" class="form-control" id="custCity" placeholder="Ej. Quito" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="custAddress" class="form-label small fw-bold">Dirección de Envío</label>
+                            <input type="text" class="form-control" id="custAddress" placeholder="Calle principal, secundaria y # de casa" required>
+                        </div>
+                        <div class="alert alert-info small border-0">
+                            <i class="fas fa-info-circle me-1"></i> Al confirmar, tu pedido será registrado y nos pondremos en contacto.
+                        </div>
+                        <button type="submit" class="btn btn-dark w-100 fw-bold py-3 mt-2">CONFIRMAR PEDIDO</button>
+                    </form>
+
+                    <div id="paymentSuccess" class="d-none text-center py-4">
+                        <i class="fas fa-check-circle text-success mb-3" style="font-size: 4rem;" aria-hidden="true"></i>
+                        <h4 class="fw-bold">¡Pedido Registrado!</h4>
+                        <div id="receiptDetails" class="text-start small mb-4 p-3 bg-light rounded-3 border"></div>
+                        <button class="btn btn-link text-muted w-100" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js_producto_login/carrito.js"></script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+/* PALETA ORIGINAL: 
+Azul Oscuro: #0B212D
+Teal: #004C6D
+Naranja: #D9691C
+Rojo: #A62111 
+   */
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+.bg-dark-custom {
+    background-color: #0B212D !important;
+}
+.bg-teal {
+    color: #006666 !important;
+        }
+.text-teal {
+    color: #004C6D;
+}
+
+.text-orange {
+    color: #d35400 !important; 
+}
+
+.btn-orange {
+    background-color: #d35400 !important;
+    border-color: #d35400 ;
+    color: #fff !important;
+}
+
+.btn-orange:hover {
+    background-color: #A62111;
+    color: white;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('Images/fondo_index.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 90vh;
+}
+
+/* Categorías  */
+.category-card {
+    display: block;
+    height: 380px;
+}
+
+.category-card .card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.category-card:hover .card {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+}
+
+.category-card img {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Cotiza  */
+.cotiza-section {
+    background: linear-gradient(rgba(11, 33, 45, 0.85), rgba(11, 33, 45, 0.85)), 
+                url('Images/cat_oficina.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Testimonios  */
+
+.testimonial-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.02);
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* Carrusel  */
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Contacto */
+.contact-header {
+    background: linear-gradient(rgba(11, 33, 45, 0.8), rgba(11, 33, 45, 0.8)), 
+                url('Images/contacto.png');
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+}
+
+.icon-box-contact {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+.btn-teal-custom {
+    background-color: #004C6D;
+    transition: all 0.3s ease;
+}
+
+.btn-teal-custom:hover {
+    background-color: #003650;
+    transform: translateY(-2px);
+}
+
+.form-control:focus {
+    background-color: #fff !important;
+    border: 1px solid #D9691C !important;
+    box-shadow: none;
+}
+.form-card {
+    background-color: #c0ccd1;
+}
+
+
+/* Legal */
+.legal-header {
+    background: linear-gradient(rgba(11, 33, 45, 0.85), rgba(11, 33, 45, 0.85)), 
+                url('Images/fondo_index.png');
+    background-size: cover;
+    background-position: center;
+    height: 35vh;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #f8f9fa;
+    color: #D9691C;
+    box-shadow: none;
+}
+
+/*  ANIMACIÓN  */
+section.animado {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+section.animado.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 128, 128, 0.05); /* Un tono teal muy suave */
+    transition: 0.3s;
+}
+
+.badge {
+    font-weight: 500;
+    padding: 0.5em 0.8em;
+}
+
+.btn-success {
+    background-color: #25d366;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #128c7e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.text-muted {
+    color: #555555 !important; 
+}
+.form-card {
+    background-color: #e9ecef; 
+}
+.form-label {
+    color: #0B212D; 
+}
+/* Redes sociales en el footer (Contrast check) */
+.text-white-50 {
+    color: rgba(255, 255, 255, 0.75) !important; 
+}
+/* AJUSTES RESPONSIVOS  */
+
+@media (max-width: 768px) {
+    /* Ajustes generales móviles */
+    .hero-section { height: 70vh; background-attachment: scroll; }
+    .cotiza-section { height: auto; padding: 50px 20px; text-align: center; }
+    h1, .display-4 {
+        font-size: 2rem !important;
+    }
+    /* Proyectos */
+    .main-img img, .side-img, .side-img-small {
+        height: auto !important;
+        min-height: 200px;
+    }
+    .hero-title {
+        font-size: 1.8rem !important; /* Tamaño de fuente legible en celular */
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .btn-lg {
+        font-size: 1rem;
+        padding: 12px 24px;
+    }
+    .form-card {
+        padding: 20px !important;
+        margin-top: 20px;
+    }
+    .category-card { height: auto; margin-bottom: 20px; }
+    .carousel-item img { height: 300px; }
+    
+    /* Nosotros: Ajuste de badge */
+    .experience-badge { position: static; margin-top: 10px; }
+    
+}
+
+
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background-color: #0B212D;
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 8px;
+    }
+}

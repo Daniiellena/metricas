@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Wood & Ensamble Designs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de navegación principal -->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark-custom">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">WOOD & ENSAMBLE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Abrir menú de navegación">
+    <span class="navbar-toggler-icon"></span>
+</button>
+            <!-- Enlaces del menú -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="d-flex align-items-center gap-3 me-2" id="auth-section">
+                        <a href="login.html" class="btn btn-outline-light btn-sm">Iniciar Sesión</a>
+                    </div>
+                    <div class="social-icons d-none d-md-block">
+<a href="#!" class="text-white me-2" aria-label="Visitar nuestro Instagram">
+        <i class="fab fa-instagram" aria-hidden="true"></i>
+    </a>
+    <a href="#!" class="text-white me-2" aria-label="Visitar nuestro Facebook">
+        <i class="fab fa-facebook" aria-hidden="true"></i>
+    </a>
+    <a href="#!" class="text-white me-2" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+                    </div>
+<a href="carrito.html" class="btn btn-outline-light position-relative" aria-label="Ver mi carrito de compras">
+    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+    <span id="cart-count" class="badge rounded-pill bg-danger">0</span>
+</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Encabezado principal de contacto -->
+<main>
+    <header class="contact-header d-flex align-items-center">
+        <div class="container text-center text-white">
+            <h1 class="display-3 fw-bold">Estamos Listos para Ayudarte</h1>
+            <p class="lead">¿Tienes un proyecto en mente? Hablemos de tus ideas.</p>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5">
+    <p class="text-orange fw-bold text-uppercase mb-1">Información Clave</p>
+    
+    <h2 class="display-5 fw-bold text-teal mb-4">Contáctanos</h2>
+    
+    <p class="text-muted mb-5">
+        Si tienes preguntas sobre nuestros materiales, procesos de diseño o deseas solicitar una visita técnica para toma de medidas, utiliza los siguientes medios.
+    </p>
+
+    <div class="d-flex align-items-start mb-4">
+        <div class="icon-box-contact bg-light shadow-sm me-3">
+            <i class="fas fa-map-marker-alt text-orange" aria-hidden="true"></i>
+        </div>
+        <div>
+            <h3 class="h5 fw-bold mb-1">Nuestra Oficina Principal</h3>
+            <p class="text-muted">Quito, Ecuador (Sector Norte)</p>
+        </div>
+    </div>
+
+    <div class="d-flex align-items-start mb-4">
+        <div class="icon-box-contact bg-light shadow-sm me-3">
+            <i class="fas fa-phone-alt text-orange" aria-hidden="true"></i>
+        </div>
+        <div>
+            <h5 class="fw-bold mb-1">Teléfono</h5>
+            <p class="text-muted">+593 99 999 9999</p>
+        </div>
+    </div>
+
+    <div class="d-flex align-items-start">
+        <div class="icon-box-contact bg-light shadow-sm me-3">
+            <i class="fas fa-envelope text-orange" aria-hidden="true"></i>
+        </div>
+        <div>
+            <h5 class="fw-bold mb-1">Correo Electrónico</h5>
+            <p class="text-muted">woodensamble@gmail.com</p>
+        </div>
+    </div>
+</div>
+                <div class="col-lg-7">
+                    <div class="card form-card border-0 shadow-lg p-4 p-md-5 rounded-4">
+                        <form id="contactForm">
+                            <h3 class="fw-bold mb-4">Envíanos un Mensaje</h3>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label small fw-bold">Nombre Completo *</label>
+                                    <input type="text" id="name" class="form-control bg-light border-0 py-3" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label small fw-bold">Correo Electrónico *</label>
+                                    <input type="email" id="email" class="form-control bg-light border-0 py-3" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="subject" class="form-label small fw-bold">Asunto *</label>
+                                    <input type="text" id="subject" class="form-control bg-light border-0 py-3" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label small fw-bold">Tu Mensaje *</label>
+                                    <textarea id="message" class="form-control bg-light border-0 py-3" rows="5" required></textarea>
+                                </div>
+
+                                <div class="col-12 mt-4">
+                                    <div class="col-12 mb-3">
+                                        <label for="captcha-answer" class="form-label small fw-bold text-dark">
+    Verificación de seguridad: <span id="captcha-question" class="badge bg-teal-custom text-dark" aria-live="assertive"></span>
+</label>
+<input type="number" id="captcha-answer" class="form-control bg-light border-0" 
+       placeholder="Escribe el resultado aquí" 
+       aria-describedby="captchaError" required>
+                                        <div id="captchaError" class="text-danger small d-none mt-1">Resultado incorrecto, intenta de nuevo.</div>
+                                    </div>
+                                    <button type="submit" class="btn btn-teal-custom w-100 py-3 fw-bold text-white shadow">
+                                        ENVIAR MENSAJE
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container text-center mb-4">
+            <h3 class="fw-bold">Nuestra Ubicación</h3>
+            <div class="rounded-4 overflow-hidden shadow-lg border-0" style="height: 450px;">
+               <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.123456789!2d-78.4678!3d-0.1234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwMDcnMjQuMiJTIDc4wrAyOCcwNC4xIlc!5e0!3m2!1ses!2sec!4v1234567890"
+    title="Mapa interactivo con la ubicación de nuestra oficina en el norte de Quito"
+    width="100%" height="100%" style="border:0;"
+    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+            </div>
+        </div>
+    </section>
+</main>
+    <!-- FOOTER -->
+    <footer id="contacto" class="bg-dark-custom text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4 text-center text-md-start">
+                <div class="col-md-4">
+                    <h4 class="fw-bold text-orange">WOOD & ENSAMBLE</h4>
+                    <p class="small text-white-50">Expertos en la fabricación de mobiliario a medida en Quito. Calidad artesanal combinada con diseño contemporáneo.</p>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="mb-3">Explorar</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#inicio" class="text-white-50 text-decoration-none small">Inicio</a></li>
+                        <li><a href="#categorias" class="text-white-50 text-decoration-none small">Categorías</a></li>
+                        <li><a href="politicas.html" class="text-white-50 text-decoration-none small">Políticas y FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-3">Contacto Directo</h5>
+                    <p class="small text-white-50 mb-1"><i class="fas fa-phone text-orange me-2"></i> +593 99 999 9999</p>
+                    <p class="small text-white-50 mb-1"><i class="fas fa-envelope text-orange me-2"></i> woodensamble@gmail.com</p>
+                    <p class="small text-white-50 mb-1"><i class="fas fa-map-marker-alt text-orange me-2"></i> Quito, Sector Norte - Ecuador</p>
+                </div>
+                <div class="col-md-3 text-center">
+<h5 class="mb-3">Síguenos</h5>
+<div class="social-links">
+    <a href="#!" class="btn btn-outline-light btn-sm me-2" aria-label="Síguenos en Facebook">
+        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+    </a>
+    <a href="#!" class="btn btn-outline-light btn-sm me-2" aria-label="Síguenos en Instagram">
+        <i class="fab fa-instagram" aria-hidden="true"></i>
+    </a>
+    <a href="#!" class="btn btn-outline-light btn-sm" aria-label="Escríbenos por WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+</div>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <div class="row">
+                <div class="col text-center">
+                    <p class="small text-white-50 mb-0">&copy; 2026 Wood & Ensamble Designs - DanielLema. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
