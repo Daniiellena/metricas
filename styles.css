@@ -14,7 +14,9 @@ body {
 .bg-dark-custom {
     background-color: #0B212D !important;
 }
-
+.bg-teal {
+    color: #006666 !important;
+        }
 .text-teal {
     color: #004C6D;
 }
@@ -78,14 +80,6 @@ body {
 }
 
 /* Testimonios  */
-.testimonial-img {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #D9691C;
-    margin: 0 auto;
-}
 
 .testimonial-card {
     background: white;
@@ -106,95 +100,6 @@ body {
 .carousel-item img {
     height: 500px;
     object-fit: cover;
-}
-
-/* Servicios */
-.services-header {
-    background: linear-gradient(rgba(11, 33, 45, 0.7), rgba(11, 33, 45, 0.7)), 
-                url('Images/servicio.png');
-    background-size: cover;
-    background-position: center;
-    height: 45vh;
-}
-
-.icon-box {
-    width: 55px;
-    height: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-}
-
-/* Nosotros */
-.about-header {
-    background: linear-gradient(rgba(11, 33, 45, 0.75), rgba(11, 33, 45, 0.75)), 
-                url('Images/nosotros.png');
-    background-size: cover;
-    background-position: center;
-    height: 40vh;
-}
-
-.experience-badge {
-    position: absolute;
-    bottom: -20px;
-    right: 20px;
-    text-align: center;
-    min-width: 140px;
-}
-
-.underline {
-    width: 60px;
-    height: 4px;
-    margin-top: 10px;
-}
-
-.value-card {
-    background: white;
-    border-radius: 15px;
-    transition: transform 0.3s ease;
-    border-bottom: 3px solid transparent;
-}
-
-.value-card:hover {
-    transform: translateY(-5px);
-    border-bottom: 3px solid #D9691C;
-}
-
-/* Proyectos  */
-.projects-header {
-    background: linear-gradient(rgba(11, 33, 45, 0.7), rgba(11, 33, 45, 0.7)), 
-                url('Images/proyectos.png');
-    background-size: cover;
-    background-position: center;
-    height: 40vh;
-}
-.project-box {
-    position: relative;
-    overflow: hidden;
-    border-radius: 1rem;
-}
-
-.project-box img {
-    width: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.main-img img { height: 500px; }
-.side-img { height: 280px; }
-.side-img-small { height: 150px; width: 100%; }
-
-.project-label {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    color: white;
-    padding: 8px 15px;
-    font-weight: bold;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    z-index: 10;
 }
 
 /* Contacto */
@@ -284,7 +189,19 @@ section.animado.visible {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-
+.text-muted {
+    color: #555555 !important; 
+}
+.form-card {
+    background-color: #e9ecef; 
+}
+.form-label {
+    color: #0B212D; 
+}
+/* Redes sociales en el footer (Contrast check) */
+.text-white-50 {
+    color: rgba(255, 255, 255, 0.75) !important; 
+}
 /* AJUSTES RESPONSIVOS  */
 
 @media (max-width: 768px) {
@@ -320,21 +237,7 @@ section.animado.visible {
     .experience-badge { position: static; margin-top: 10px; }
     
 }
-/* Mejora de contraste para textos secundarios */
-.text-muted {
-    color: #555555 !important; /* Un gris más oscuro para que sea legible sobre blanco/gris claro */
-}
-/* Mejora de contraste en el formulario */
-.form-card {
-    background-color: #e9ecef; /* Un gris un poco más neutro y suave */
-}
-.form-label {
-    color: #0B212D; /* Usamos tu azul oscuro para que las etiquetas resalten bien */
-}
-/* Redes sociales en el footer (Contrast check) */
-.text-white-50 {
-    color: rgba(255, 255, 255, 0.75) !important; /* Subimos la opacidad del 50% al 75% */
-}
+
 
 @media (max-width: 992px) {
     .navbar-collapse {

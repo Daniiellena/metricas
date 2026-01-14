@@ -3,30 +3,18 @@ const productos = [
     // HOGAR / SALA
     { id: 1, nombre: "Sofá Modular", cat: "hogar", precio: 850, desc: "Sofá de 3 piezas con tela anti-manchas.", descue: true, img: "Images_catalogo/1_sala.png" },
     { id: 2, nombre: "Mesa de Centro Roble", cat: "hogar", precio: 120, desc: "Mesa sólida con acabado natural.", descue: false, img: "Images_catalogo/2_mesa.png" },
-    { id: 3, nombre: "Centro de TV Nórdico", cat: "hogar", precio: 450, desc: "Espacio para TV de hasta 65 pulgadas.", descue: true, img: "Images_catalogo/3_centro tv nordico.png" },
-    { id: 4, nombre: "Repisa Flotante Minimal", cat: "hogar", precio: 45, desc: "Set de 3 repisas invisibles.", descue: false, img: "Images_catalogo/4_repisas invisible.png" },
-    { id: 5, nombre: "Sillón Orejero Azul", cat: "hogar", precio: 320, desc: "Clásico sillón de lectura muy cómodo.", descue: false, img: "Images_catalogo/5_sillon azul lectura.png" },
-
+   
     // OFICINA
     { id: 6, nombre: "Escritorio Ejecutivo L", cat: "oficina", precio: 380, desc: "Amplio espacio de trabajo con cajonera.", descue: true, img: "Images_catalogo/6_escritorio ejecutivo.png" },
     { id: 7, nombre: "Silla Ergonómica Pro", cat: "oficina", precio: 210, desc: "Soporte lumbar ajustable y malla transpirable.", descue: true, img: "Images_catalogo/7_silla ergonomica pro.png" },
-    { id: 8, nombre: "Librero Industrial", cat: "oficina", precio: 290, desc: "Madera y metal, estilo vintage.", descue: false, img: "Images_catalogo/8_librero industrial.png" },
-    { id: 9, nombre: "Mesa de Reuniones", cat: "oficina", precio: 550, desc: "Capacidad para 6 personas, madera sólida.", descue: false, img: "Images_catalogo/9_mesa reuniones.png" },
-    { id: 10, nombre: "Organizador de Pared", cat: "oficina", precio: 65, desc: "Panel perforado para herramientas de oficina.", descue: false, img: "Images_catalogo/10_organizador de pared.png" },
-
+  
     // DORMITORIO
     { id: 11, nombre: "Cama King Size Wood", cat: "dormitorio", precio: 950, desc: "Estructura reforzada sin ruidos.", descue: true, img: "Images_catalogo/11_cama king saze wood.png" },
     { id: 12, nombre: "Velador Moderno", cat: "dormitorio", precio: 85, desc: "Un cajón con sistema de cierre lento.", descue: false, img: "Images_catalogo/12_velador moderno.png" },
-    { id: 13, nombre: "Cómoda de 6 Cajones", cat: "dormitorio", precio: 420, desc: "Gran capacidad de almacenamiento.", descue: false, img: "Images_catalogo/13_comoda de 6 cajones.png" },
-    { id: 14, nombre: "Espejo de Cuerpo Entero", cat: "dormitorio", precio: 150, desc: "Marco de madera tallada a mano.", descue: true, img: "Images_catalogo/14_espejo de cuerpoe entero.png" },
-    { id: 15, nombre: "Banqueta Pie de Cama", cat: "dormitorio", precio: 110, desc: "Tapizada en lino gris.", descue: false, img: "Images_catalogo/15_baqueta pie de cama.png" },
 
     // CLOSETS
     { id: 16, nombre: "Closet Empotrado Full", cat: "closets", precio: 1200, desc: "Diseño de pared a pared con zapatera.", descue: true, img: "Images_catalogo/16_closet empotrado full.png" },
     { id: 17, nombre: "Walk-in Closet Luxury", cat: "closets", precio: 2500, desc: "Isla central y luces LED integradas.", descue: false, img: "Images_catalogo/17_Walk-in Closet Luxury.png" },
-    { id: 18, nombre: "Armario Juvenil", cat: "closets", precio: 680, desc: "Compacto y funcional para niños.", descue: true, img: "Images_catalogo/18_armario juvenil.png" },
-    { id: 19, nombre: "Organizador de Melamina", cat: "closets", precio: 340, desc: "Módulos ajustables según tu necesidad.", descue: false, img: "Images_catalogo/19_organizador de melanina.png" },
-    { id: 20, nombre: "Closet de Pasillo", cat: "closets", precio: 450, desc: "Puertas corredizas para ahorrar espacio.", descue: false, img: "Images_catalogo/20_closet de pasillo.png" }
 ];
 
 /* Filtra los productos SOLAMENTE por categoría */
