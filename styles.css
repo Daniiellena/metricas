@@ -24,9 +24,9 @@ body {
 }
 
 .btn-orange {
-    background-color: #D9691C;
-    border-color: #D9691C;
-    color: white;
+    background-color: #d35400 !important;
+    border-color: #d35400 ;
+    color: #fff !important;
 }
 
 .btn-orange:hover {
