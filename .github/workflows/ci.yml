@@ -1,0 +1,29 @@
+name: CI Wood & Ensamble Quality Metrics
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  quality-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Linting Tools
+        run: npm install -g eslint eslint-plugin-complexity
+
+      # Métrica: Complejidad Ciclomática (Meta: <= 10)
+      - name: Check Cyclomatic Complexity
+        run: |
+          echo "Analizando complejidad en archivos JS..."
+          # Aquí el pipeline fallará si alguna función supera el umbral de 10
+          npx eslint js_producto_login/*.js --rule 'complexity: ["error", 10]'
