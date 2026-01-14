@@ -54,18 +54,52 @@ document.querySelectorAll('section').forEach(section => {
 });
 
 // Manejo del formulario de contacto
+// Lógica del Captcha Matemático
+let captchaResult;
+
+function generateCaptcha() {
+    const num1 = Math.floor(Math.random() * 10) + 1;
+    const num2 = Math.floor(Math.random() * 10) + 1;
+    captchaResult = num1 + num2;
+    document.getElementById('captcha-question').innerText = `${num1} + ${num2} = ?`;
+}
+
+// Generar el primer captcha al cargar
+document.addEventListener('DOMContentLoaded', generateCaptcha);
+
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Simula envío exitoso
+        const userAnswer = parseInt(document.getElementById('captcha-answer').value);
+        const email = document.getElementById('email').value;
+        const captchaError = document.getElementById('captchaError');
         const successMessage = document.getElementById('successMessage');
-        
+
+        // 1. Validación de Correo Electrónico (Regex simple)
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert("Por favor, ingresa un correo electrónico válido.");
+            return;
+        }
+
+        // 2. Validación de Captcha
+        if (userAnswer !== captchaResult) {
+            captchaError.classList.remove('d-none');
+            generateCaptcha(); // Refresca la suma si falla
+            document.getElementById('captcha-answer').value = "";
+            return;
+        }
+
+        // Si todo está bien:
+        captchaError.classList.add('d-none');
         successMessage.classList.remove('d-none');
-        contactForm.reset();
         
-        // Oculta mensaje luego de 5 segundos
+        // Resetear formulario y generar nuevo captcha para el siguiente envío
+        contactForm.reset();
+        generateCaptcha();
+
         setTimeout(() => {
             successMessage.classList.add('d-none');
         }, 5000);

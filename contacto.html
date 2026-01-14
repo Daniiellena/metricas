@@ -111,6 +111,11 @@
                                     <textarea id="message" class="form-control bg-light border-0 py-3" rows="5" required></textarea>
                                 </div>
                                 <div class="col-12 mt-4">
+                                    <div class="col-12 mb-3">
+    <label class="form-label small fw-bold">Verificación de seguridad: <span id="captcha-question"></span></label>
+    <input type="number" id="captcha-answer" class="form-control bg-light border-0" placeholder="Resultado de la suma" required>
+    <div id="captchaError" class="text-danger small d-none mt-1">Resultado incorrecto, intenta de nuevo.</div>
+</div>
                                     <!-- Botón de envío -->
                                     <button type="submit" class="btn btn-teal-custom w-100 py-3 fw-bold text-white shadow">
                                         ENVIAR MENSAJE
