@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control | Wood & Ensamble</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --dark-blue: #212529; --accent: #ffc107; }
+        body { background-color: #f8f9fa; }
+        .sidebar { height: 100vh; background: var(--dark-blue); color: white; position: fixed; width: 250px; }
+        .main-content { margin-left: 250px; padding: 30px; }
+        .card-stats { border: none; border-radius: 15px; transition: 0.3s; }
+        .card-stats:hover { transform: translateY(-5px); }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar p-3">
+        <h4 class="text-center fw-bold mb-4">W&E ADMIN</h4>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+    <li class="nav-item">
+        <a href="#" class="nav-link text-white active bg-secondary">
+            <i class="fas fa-chart-line me-2"></i> Dashboard
+        </a>
+    </li>
+    <li>
+        <a href="productos.html" class="nav-link text-white">
+            <i class="fas fa-store me-2"></i> Ir a la Tienda
+        </a>
+    </li>
+    <hr>
+    <li>
+        <a href="#" class="nav-link text-danger fw-bold" onclick="logoutAdmin()">
+            <i class="fas fa-sign-out-alt me-2"></i> Cerrar Sesión
+        </a>
+    </li>
+</ul>
+    </div>
+
+    <div class="main-content">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>Resumen de Operaciones</h2>
+            <span id="adminName" class="badge bg-dark p-2">Admin: Cargando...</span>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="card card-stats bg-white shadow-sm p-4">
+                    <div class="d-flex align-items-center">
+                        <div class="icon-box bg-primary text-white p-3 rounded-3 me-3"><i class="fas fa-dollar-sign"></i></div>
+                        <div>
+                            <p class="text-muted mb-0">Total Ventas</p>
+                            <h3 class="fw-bold mb-0" id="totalVentas">$0.00</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-stats bg-white shadow-sm p-4">
+                    <div class="d-flex align-items-center">
+                        <div class="icon-box bg-warning text-dark p-3 rounded-3 me-3"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <p class="text-muted mb-0">Pendientes</p>
+                            <h3 class="fw-bold mb-0" id="pedidosPendientes">0</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-0 shadow-sm rounded-4">
+            <div class="card-body p-4">
+                <h5 class="fw-bold mb-3">Gestión de Pedidos Recientes</h5>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>ID</th>
+                                <th>Cliente</th>
+                                <th>Total</th>
+                                <th>Estado</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaPedidos">
+                            <tr>
+                                <td colspan="5" class="text-center text-muted p-5">Conectando con la base de datos...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js_producto_login/admin.js"></script>
+</body>
+</html>
